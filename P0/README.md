@@ -1,1 +1,6 @@
  # Práctica 0
+ probanco el VSCode...
+ 
+***********************
+**  Mi segundo cambio....
+*************************
