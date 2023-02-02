@@ -3,7 +3,6 @@ button {
     border: 3px solid rgb(175, 175, 175); /*anchura, estilo y color borde*/
     padding: 10px; /*espacio alrededor texto*/
     margin-left: 50%;
-    margin-top: 30%;
     background-color: rgb(94, 131, 131); /*color botón*/
     color: #ffffff; /*color texto*/
     text-transform: uppercase; /*capitalización texto*/
