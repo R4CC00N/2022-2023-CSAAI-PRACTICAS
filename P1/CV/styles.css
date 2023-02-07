@@ -7,34 +7,61 @@
   
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
-float: left;
-padding: 10px;
-min-height: 500px;
+  float: left;
+  padding: 10px;
+  min-height: 700px;
 }
 
 .izquierda {
-width: 25%;
+  width: 25%;
 }
 
 .derecha {
-width: 75%;
+  width: 75%;
+  
 }
-
+@font-face {
+  font-family: "font_drip";
+  src: url("font_drip.tff");
+}
+@font-face {
+  font-family: "suggar";
+  src: url("suggar.ttf");
+}
 /* Clear floats despues de las columnas para eliminar la superposición */
 .filla:after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
+.peposad{
+  position: absolute;
+  width: 100px;
+  margin-left: 80%;
+  
+}
+
+
 #c1 {
-    background-color:rgb(178, 142, 193);
+    font-family: "suggar";
+    background-color:rgba(179, 0, 255, 0.5);
+    border-radius: 10px;
+    border: black 5px solid;
+    
 }
 
 #c2 {
-    background-color:rgb(188, 127, 210);
+    font-family: "suggar";
+    background-color:rgba(255, 0, 0, 0.441);
+    border-radius: 10px;
+    border: black 5px solid;
+    
 }
 
+#imghtml {
+  opacity: 100%;
+}
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
@@ -62,4 +89,17 @@ img {
     }
 }
 
+table {
+  
+  border-collapse: separate;
+  border-spacing: 5px;
+  background: rgb(53, 4, 25) url("gradient.gif") bottom left repeat-x;
+  color: rgb(255, 0, 0);
+  
+}
+
+td, th {
+  background: rgb(178, 133, 133);
+  color: rgb(221, 221, 221);
+}
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
