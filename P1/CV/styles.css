@@ -80,7 +80,7 @@ img {
     width: 50%;
   }
   .video_pepo {
-    padding: none;
+    padding: 0 2px;
     float:none;
     margin-left: 20%;
     width: 50%;
