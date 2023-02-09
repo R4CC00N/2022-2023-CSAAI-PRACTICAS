@@ -37,7 +37,7 @@
 
 #img_aux{
   position: absolute;
-  width: 60px;
+  width: px;
   margin-left: 85%;
   border-radius: 50px;
   border: rgb(125, 125, 125) 3px solid;
@@ -68,7 +68,6 @@
 
 #racoon_profile{
   opacity: 100%;
-  width: 200px;
   border-radius: 10px;
   border: rgb(255, 255, 255) 5px solid;
 }
