@@ -68,6 +68,7 @@
 
 #racoon_profile{
   opacity: 100%;
+  width: 200px;
   border-radius: 10px;
   border: rgb(255, 255, 255) 5px solid;
 }
