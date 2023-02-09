@@ -41,9 +41,7 @@
   margin-left: 80%;
   
 }
-.centrado{
-  text-align: center;
-}
+
 
 #c1 {
     font-family: "suggar";
@@ -77,9 +75,11 @@
     width: 50%;
   }
   .video_pepo {
-    padding: 0 2px;
+    padding: 0 6px;
     float:none;
-    margin-left: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
   }
 
