@@ -68,7 +68,7 @@
 
 #racoon_profile{
   opacity: 100%;
-  border-radius:4%;
+  border-radius: 8px;
   border: rgb(255, 255, 255) 5px solid;
 }
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
