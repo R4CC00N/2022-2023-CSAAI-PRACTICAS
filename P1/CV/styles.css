@@ -141,7 +141,6 @@ h1{
 
 .apartados{
   font-family: "suggar";
-  font-size: 35px;
   border-bottom: #ffffff 7px double;
   padding: 25px;
   display: inline-flex;
@@ -163,10 +162,6 @@ body {
   padding: 0%;
   margin: 50px;
 }
-
-
-
-
 
 td, th {
   background: rgb(178, 133, 133);
