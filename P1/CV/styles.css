@@ -47,7 +47,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  border: rgb(125, 125, 125) 3px solid;
+  border: rgb(136, 255, 0) 3px solid;
 }
 
 #c1 {
@@ -142,7 +142,7 @@ h1{
 .apartados{
   font-family: "suggar";
   font-size: 35px;
-  border-bottom: #ffffff 7px solid;
+  border-bottom: #ffffff 7px double;
   padding: 25px;
   display: inline-flex;
   width: 95%;
