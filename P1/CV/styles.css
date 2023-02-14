@@ -130,6 +130,23 @@ h1{
   text-align: center;
 }
 
+
+
+
+
+body {
+  background-image: url("fondo.jpg");
+  background-size: 100% 100% ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0%;
+  margin: 50px;
+}
+
+
+
+
+
 td, th {
   background: rgb(178, 133, 133);
   color: rgb(221, 221, 221);
