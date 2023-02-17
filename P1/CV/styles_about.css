@@ -17,16 +17,21 @@
     margin-top: 7px;
     display: block;
     width: 100%;
+    border: rgb(255, 116, 243) 3px solid;
     color: black;
   }
   .cabecera{
     background-color:#8e91cb;
     padding:15px;
+    border: rgb(116, 213, 255) 3px solid;
     text-align:center;
   }
   .main {
+    background-color: #8ecba2;
     float: left;
     width: 50%;
+    margin-top: 7px;
+    border: rgb(99, 99, 99) 3px solid;
     padding: 0 10px;
 
   }
@@ -37,12 +42,14 @@
     width: 30%;
     padding: 30px;
     margin-top: 7px;
+    border: rgb(113, 245, 5) 3px solid;
     text-align: center;
   }
   .final{
     background-color:#e5e5e5;
     text-align:center;
     padding:10px;
+    border: rgb(181, 53, 53) 3px solid;
     margin-top:7px;
   }
   
