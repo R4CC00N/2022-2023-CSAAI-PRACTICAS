@@ -3,14 +3,38 @@
   }
   
   body{
-    font-family:Verdana;color:#aaaaaa;
+    font-family:"font_3";
+    color:#ffffff;
   }
   .menu {
     float: left;
-    width: 20%;
+    width: 10%;
     text-align: center;
   }
+  @font-face {
+    font-family: "font_1";
+    src: url("fonts/Ghyne-9YRy5.otf");
+  }
   
+  @font-face {
+    font-family: "font_3";
+    src: url("fonts/GarudaMuda-Wynrv.otf");
+  }
+  h1{
+    font-family: "font_3";
+    text-align: center;
+    color: aliceblue;
+    text-shadow:4px 4px rgb(56, 56, 56);
+    font-size: 50px;
+    height: 30px;
+  }
+  h2{
+    font-family: "font_3";
+    color: aliceblue;
+    text-shadow:4px 4px rgb(56, 56, 56);
+    font-size: 20px;
+    height: 30px;
+  }
   a {
     background-color: #d2a6bf;
     padding: 20px;
@@ -18,19 +42,23 @@
     display: block;
     width: 100%;
     border: rgb(255, 116, 243) 3px solid;
+    border-radius: 10px;
     color: black;
   }
   .cabecera{
     background-color:#8e91cb;
     padding:15px;
+    border-radius: 10px;
     border: rgb(116, 213, 255) 3px solid;
     text-align:center;
+    
   }
   .main {
     background-color: #8ecba2;
     float: left;
-    width: 50%;
+    width: 60%;
     margin-top: 7px;
+    border-radius: 10px;
     border: rgb(99, 99, 99) 3px solid;
     padding: 0 10px;
 
@@ -42,6 +70,7 @@
     width: 30%;
     padding: 30px;
     margin-top: 7px;
+    border-radius: 10px;
     border: rgb(113, 245, 5) 3px solid;
     text-align: center;
   }
@@ -59,12 +88,22 @@
       width: 100%;
     }
   }
-  #img_aux{
-    position: absolute;
+
+  #img_name{
+    background-color: #e0e0e0;
+    padding: 2px;
     width: 60px;
-    margin-left: 10%;
+    height: 60px;
     border-radius: 50px;
-    border: rgb(0, 76, 255) 3px solid;
+    border: rgb(116, 213, 255) 3px solid;
+  }
+  #img_boton{
+    background-color: #e0e0e0;
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    border: rgb(116, 213, 255) 3px solid;
   }
   #info{
     float: right;
@@ -76,9 +115,8 @@
     height: 300px;
     margin-top: 3%;
     margin-bottom: 3%;
-    padding: 3px;
     opacity: 100%;
     border-radius: 8px;
-    border: rgb(255, 0, 0) 5px solid;
+    border: rgb(19, 119, 49) 5px solid;
     float: right;
   }

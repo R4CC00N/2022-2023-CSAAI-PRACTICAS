@@ -20,14 +20,13 @@
   width: 75%;
   
 }
+
+
 @font-face {
-  font-family: "font_drip";
-  src: url("font_drip.tff");
+  font-family: "font_3";
+  src: url("fonts/GarudaMuda-Wynrv.otf");
 }
-@font-face {
-  font-family: "suggar";
-  src: url("suggar.ttf");
-}
+
 /* Clear floats despues de las columnas para eliminar la superposición */
 .filla:after {
   content: "";
@@ -35,13 +34,6 @@
   clear: both;
 }
 
-#img_aux{
-  position: absolute;
-  width: 60px;
-  margin-left: 75%;
-  border-radius: 50px;
-  border: rgb(0, 76, 255) 3px solid;
-}
 #img_lista{
   margin-top: 2%;
   padding: 3px;
@@ -53,9 +45,10 @@
 
 #c1 {
     color:azure;
-    font-family: "suggar";
+    font-family: "sans-serif";
+    font-style: italic;
     font-size:20px;
-    background-color:rgba(174, 148, 148, 0.5);
+    background-color:rgba(163, 175, 181, 0.5);
     border-radius: 10px;
     border: black 5px solid;
     
@@ -63,9 +56,10 @@
 
 #c2 {
     color:azure;
-    font-family: "suggar";
+    font-family: "sans-serif";
+    font-style: italic;
     font-size:20px;
-    background-color:rgba(84, 63, 63, 0.441);
+    background-color:rgba(82, 51, 51, 0.441);
     border-radius: 10px;
     border: black 5px solid;
     
@@ -129,6 +123,9 @@ img {
     .video{
       width: 100%;
     }
+    .superior{
+      width: 100%;
+    }
 }
 
 table {
@@ -139,14 +136,42 @@ table {
   color: rgb(255, 0, 0);
   
 }
+.superior{
+  border-radius: 10px;
+  border: black 5px solid;
+  background-color:rgba(52, 45, 45, 0.441);
+  
+}
 h1{
+  font-family: "font_3";
   text-align: center;
+  color: aliceblue;
+  text-shadow:4px 4px rgb(56, 56, 56);
+  font-size: 50px;
+  height: 30px;
+  
+}
+.name{
+  font-family: "font_3";
+  color: aliceblue;
+  text-shadow:4px 4px rgb(56, 56, 56);
+  font-size: 40px;
+  height: 30px;
+  margin-left: 5%;
+  
+}
+#img_name{
+  
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: rgb(116, 213, 255) 3px solid;
 }
 
 
 .apartados{
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
-  font-family: "suggar";
+  font-family: "font_3";
   border-bottom: #ffffff 7px double;
   padding: 25px;
   display: inline-flex;
@@ -172,7 +197,7 @@ h1{
 }
 
 body {
-  background-image: url("fondo.jpg");
+  background-image: url("img/fondo.jpg");
   background-size: 100% 100% ;
   background-repeat: no-repeat;
   background-attachment: fixed;
