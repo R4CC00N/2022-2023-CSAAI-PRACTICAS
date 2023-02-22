@@ -40,10 +40,11 @@
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  border: rgb(116, 213, 255) 3px solid;
+  border: #1d8188 3px solid;
 }
 
 #c1 {
+  
     color:azure;
     font-family: "sans-serif";
     font-style: italic;
@@ -70,7 +71,10 @@
 }
 
 #racoon_profile{
+
+  width: 80%;
   margin-top: 5%;
+  margin-left: 10%;
   opacity: 100%;
   border-radius: 8px;
   border: rgb(255, 255, 255) 5px solid;
@@ -129,7 +133,7 @@ img {
 }
 
 table {
-  
+  border-radius: 5px;
   border-collapse: separate;
   border-spacing: 5px;
   background: rgb(53, 4, 25) url("gradient.gif") bottom left repeat-x;
@@ -195,6 +199,16 @@ h1{
   justify-content: center;
   align-items: center;
 }
+.exp{
+  display: inline-flex;
+  padding: 25px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
 body {
   background-image: url("img/fondo.jpg");
@@ -206,10 +220,29 @@ body {
 }
 
 td, th {
+  padding: 3px;
+  font-family: "font_3";
+  font-size: 25px;
   background: rgb(178, 133, 133);
   color: rgb(221, 221, 221);
+  padding: auto;
+  border-radius: 5px;
 }
 p{
   color: black;
+}
+a {
+  padding: 3px;
+  font-family: "font_3";
+  text-align: center;
+  text-decoration: none;
+  background-color: #76f6ffa4;
+  padding: auto;
+  margin-top: 7px;
+  display: block;
+  width: 80%;
+  border: #1d8188 5px solid;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
 }
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */

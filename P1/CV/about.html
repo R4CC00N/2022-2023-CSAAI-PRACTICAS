@@ -11,7 +11,7 @@
         <!-- Hoja de estilo -->
         <link rel="stylesheet" href="styles_about.css">    
     </head>
-
+    <script> function msg(){alert("NO TE RINDAS SI YO PUDE TU TAMBIEN, ANIMO");} </script> 
     <body>
         <div class="cabecera">
             <samp><h1>SOBRE MI <img id="img_name" src="img/auxiliar_cv.jpg" alt="imagen auxiliar"></h1>
@@ -19,43 +19,63 @@
 
         <div style="overflow:auto">
         <div class="menu">
-            <a href="#"><img id="img_boton" src="img/ingeniero.png" alt="imagen auxiliar"></a>
-            <a href="https://r4cc00n.github.io/2022-2023-CSAAI-PRACTICAS/P1/CV/index.html"><img src="img/back.png" alt="imagen auxiliar"></a>
+            
+            <a onclick="msg()">
+              <div>
+                <h2 id="btn">MENSAJE PARA TI</h2>
+                <img id="img_boton" src="img/ingeniero.png" alt="imagen auxiliar">
+              </div>
+              
+            </a>
+            <a href="https://r4cc00n.github.io/2022-2023-CSAAI-PRACTICAS/P1/CV/index.html">
+              <div>
+                <h2 id="btn">VOLVER</h2>
+                <img id="img_boton"  src="img/back.png" alt="imagen auxiliar">
+              </div>
+            </a>
         </div>
 
         <div class="main">
-            <div><img id="racoon_profile" src="img/Foto_perfil.jpeg" alt="foto de perfil raccoon" width="200" height="200"></div>
+            <div><img id="racoon_profile" src="img/Foto_perfil.jpeg" alt="foto de perfil raccoon" ></div>
             <div>
-              <h2>London</h2>
-              <p>London is the capital city of England.</p>
-              <p>It is the most populous city in the United Kingdom,
-              with a metropolitan area of over 13 million inhabitants.</p>
+          
+              <h2>Destreza manual</h2>
+              <p>Los mapaches tenemos manos ágiles y habilidosas con dedos móviles, lo que les permite manipular objetos con destreza y habilidad.</p>
+              <p id="notas">"No por nada me dicen el mejor ladron."</p>
             </div>
           
             <div>
-              <h2>Paris</h2>
-              <p>Paris is the capital of France.</p> 
-              <p>The Paris area is one of the largest population centers in Europe,
-              with more than 12 million inhabitants.</p>
+              <h2>Escalada</h2>
+              <p>Los mapaches somos excelentes escaladores y podemos trepar árboles y estructuras con facilidad. las garras curvas y fuertes nos permiten afferarnos a las superficies verticales, y la cola  ayuda a mantener el equilibrio.</p>
+              <p id="notas">"Para escabar siempre me viene bien."</p>
             </div>
           
             <div>
-              <h2>Tokyo</h2>
-              <p>Tokyo is the capital of Japan.</p>
-              <p>It is the center of the Greater Tokyo Area,
-              and the most populous metropolitan area in the world.</p>
+              <h2>Natación</h2>
+              <p> somos excelentes nadadores y nos gusta vivir cerca del agua. Nuestras patas traseras son palmeadas, lo que nos permite nadar con facilidad.</p>
+              <p id="notas"> <b>"GLU GLU GLU"</b> </p>
+            </div>
+            <div>
+              <h2>Adaptabilidad:</h2>
+              <p>Los mapaches somos capaces de adaptarnos a diferentes entornos, incluyendo bosques, zonas urbanas y suburbanas. soy conocido por ser un oportunista y puedo elimentarme de casi todo.</p>
+              <p id="notas"> "Ya me dio hambre gente." </p>
             </div>
           </div>
 
+
         <div class="right">
             <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>
+              Hola, soy un mapache, un mamífero de tamaño mediano que vive en América del Norte y Central. Me distinguen por mi cara ya que siempre voy con una máscara oscura alrededor de mis ojos. Me gusta vivir cerca del agua, como en bosques húmedos, pantanos y ríos.            </p>
+            <p>
+              Soy un animal omnívoro es decir como lo que sea. Soy increiblemente perezoso pero tambien muy activo cuando es necesario, tengo lo mejor de ambos mundos.
+            </p>
+            <p>Soy un animal nocturno y generalmente duermo durante el día en una madriguera o un agujero en un árbol. Me conocen como <b>'EL SEÑOR DE LA NOCHEEE'</b> , soy solitario y territorial, y defiendo mi territorio contra otros mapaches, soy un lobo solitario AUUUUU.</p> 
+            <p>En general, me adapto especialmente bien, y he demostrado ser muy bueno sobreviviendo en entornos urbanos y suburbanos.</p>
         </div>
         </div>
 
-        <div class="final"> <img src="img/icoon_raccoon.png" alt="imagen apoyo"> </div>
+        <div class="final"> <img id="img_fin" src="img/icoon_raccoon.png" alt="imagen apoyo"> </div>
 
     </body>
 </html>
