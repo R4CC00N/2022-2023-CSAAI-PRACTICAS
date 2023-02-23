@@ -10,12 +10,12 @@ btn1.onclick = () => {
 
     //-- Cambiar el color del fondo...
     //-- Si no tenía color asignado ponemos amarillo
-    if (btn1.style.backgroundColor == "") {
-        btn1.style.backgroundColor = "yellow";
+    if (btn1.backgroundColor == "") {
+        btn1.backgroundColor = "yellow";
     }
     //-- Si ya tiene color se lo quitamos
     else {
-        btn1.style.backgroundColor = "";
+        btn1.backgroundColor = "";
     }
 
 }
@@ -24,12 +24,12 @@ btn2.onclick = () => {
 
     //-- Cambiar el color del fondo...
     //-- Si no tenía color asignado ponemos amarillo
-    if (btn1.style.backgroundColor == "") {
-        btn1.style.backgroundColor = "red";
+    if (btn1.backgroundColor == "") {
+        btn1.backgroundColor = "red";
     }
     //-- Si ya tiene color se lo quitamos
     else {
-        btn1.style.backgroundColor = "";
+        btn1.backgroundColor = "";
     }
 
 }
