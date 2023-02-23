@@ -144,7 +144,6 @@ table {
   
 }
 .superior{
-  padding: 10px;
   border-radius: 10px;
   border: black 5px solid;
   background-color:rgba(52, 45, 45, 0.441);
@@ -155,9 +154,10 @@ table {
   font-family: "font_3";
   color: aliceblue;
   text-shadow:4px 4px rgb(56, 56, 56);
-  font-size: 40px;
-  height: 20px;
+  font-size: 30px;
+  height: 30px;
   text-align: center;
+  padding: 5px;
   
 }
 #img_name{
