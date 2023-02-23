@@ -195,8 +195,7 @@ table {
   align-items: center;
 }
 .exp{
-  overflow-y: auto;
-  
+  overflow-x: auto;
   padding: 25px;
   width: 95%;
   margin-left: auto;
@@ -237,7 +236,7 @@ a {
   padding: auto;
   margin-top: 7px;
   display: block;
-  width: 80%;
+  width: 95%;
   border: #1d8188 5px solid;
   border-radius: 10px;
   color: rgb(255, 255, 255);
