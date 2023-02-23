@@ -155,7 +155,7 @@ table {
   color: aliceblue;
   text-shadow:4px 4px rgb(56, 56, 56);
   font-size: 30px;
-  height: 30px;
+  width: 100%;
   text-align: center;
   padding: 5px;
   
