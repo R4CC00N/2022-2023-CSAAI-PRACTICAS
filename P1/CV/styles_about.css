@@ -97,7 +97,7 @@
     }
   }
 
-  #img_name{
+  .img_name{
     margin: 0%;
     background-color: #e0e0e0;
     padding: 2px;
@@ -106,7 +106,7 @@
     border-radius: 50px;
     border: #5e62ae 5px solid;
   }
-  #img_boton{
+  .img_boton{
     background-color: #e0e0e0;
     padding: 2px;
     width: 50%;
@@ -136,7 +136,7 @@
     border: #603a6a 5px solid;
     float: right;
   }
-  #btn{
+  .btn{
     margin: 0%;
     font-family: "font_3";
     color: aliceblue;
@@ -144,7 +144,7 @@
     height: 30px;
     text-shadow:4px 4px #1d8188;
   }
-  #notas{
+  .notas{
     margin-left: 3%;
     color: rgb(0, 0, 0);
   }
