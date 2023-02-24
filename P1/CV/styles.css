@@ -87,7 +87,7 @@
   border-radius: 8px;
   border: rgb(255, 255, 255) 5px double;
 }
-#img_tabla{
+.img_tabla{
   
   width: 100%;
   opacity: 100%;
@@ -110,8 +110,7 @@ img {
 
 
   .video {
-    padding:10 20px;
-    float:center;
+    padding:10px 20px;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -243,12 +242,11 @@ body {
 td, th {
   width: 20%;
   text-align: center;
-  padding: 8px;
+  padding: 2px;
   font-family: "font_3";
   font-size: 25px;
   background: rgb(178, 133, 133);
   color: rgb(221, 221, 221);
-  padding: auto;
   border-radius: 5px;
 }
 p{
