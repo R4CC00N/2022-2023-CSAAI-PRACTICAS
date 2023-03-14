@@ -6,34 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="crono.js" defer></script>
     <script src="boton.js" defer></script>
+    <link rel="stylesheet" href="boom.css">  
     <title>BOOM</title>
 </head>
 <body>
-    <p id="display_num_1">* * * *</p>
-    <p id="display_num_2">* * * *</p>
-    <p id="display_num_3">* * * *</p>
-    <p id="display_num_4">* * * *</p>
+    <div id="combinacion">
+        <div class="secreto">
+            <div><p class="codigo" id="display_num_1">*</p></div>
+            <div><p class="codigo" id="display_num_2">*</p></div>
+            <div><p class="codigo" id="display_num_3">*</p></div>
+            <div><p class="codigo" id="display_num_4">*</p></div>
+        </div>
 
-    <button type="button" value="1" class="digito">1</button>
-    <button type="button" value="2" class="digito">2</button>
-    <button type="button" value="3" class="digito">3</button>
-    <br>
-    <button type="button" value="4" class="digito">4</button>
-    <button type="button" value="5" class="digito">5</button>
-    <button type="button" value="6" class="digito">6</button>
-    <br>
-    <button type="button" value="7" class="digito">7</button>
-    <button type="button" value="8" class="digito">8</button>
-    <button type="button" value="9" class="digito">9</button>
-    <br>
-    <button type="button" value="0" class="digito">0</button>
-    <br>
-    <br>
-
-    <p id="display">0:0:0</p>
-    <button type="button" id="start">START</button>
-    <button type="button" id="stop">STOP</button>
-    <button type="button" id="reset">RESET</button>
-    <br>
+        <div class="numeros">
+            <button type="button" value="1" class="digito">1</button>
+            <button type="button" value="2" class="digito">2</button>
+            <button type="button" value="3" class="digito">3</button>
+            <br>
+            <br>
+            <button type="button" value="4" class="digito">4</button>
+            <button type="button" value="5" class="digito">5</button>
+            <button type="button" value="6" class="digito">6</button>
+            <br>
+            <br>
+            <button type="button" value="7" class="digito">7</button>
+            <button type="button" value="8" class="digito">8</button>
+            <button type="button" value="9" class="digito">9</button>
+            <br>
+            <br>
+            <button type="button" value="0" class="digito">0</button>
+        </div>
+        <div class="cronometro">
+            <div>
+                <p id="display">0:0:0</p>
+            </div>
+            <div class="numeros">
+                <button class="accion" type="button" id="start"><img class="img_boton" src="img/play.png" alt="play"></button>
+                <button class="accion" type="button" id="stop"> <img class="img_boton" src="img/stop.png" alt="stop"></button>
+                <button class="accion" type="button" id="reset"><img class="img_boton" src="img/restar.png" alt="restart"></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

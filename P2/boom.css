@@ -1,0 +1,74 @@
+@media screen and (max-width: 600px) {
+    /* For mobile phones: */
+    #combinacion {
+      width: 100%;
+    }
+  }
+.codigo{ 
+    color: aliceblue;
+    font-size: 30px;
+    padding: 10px;
+}
+.secreto{
+    border: 10px double rgb(152, 82, 156);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(111, 38, 111);
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex; 
+    justify-content: space-around;
+    align-items: center;
+    padding:0 90px ;
+}
+.numeros{
+    text-align: center;
+}
+.digito{
+    border-radius: 50px;
+    font-size: 30px;
+    color: aliceblue;
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    padding: auto;
+    background: linear-gradient(rgb(237, 180, 255),rgb(176, 85, 176));
+}
+.accion{
+    justify-content: space-around;
+    border-radius: 10px;
+    border: 0px;
+    padding: auto;
+    background: linear-gradient(rgb(228, 140, 255),rgb(111, 38, 111));
+}
+.img_boton{
+    width: 30%;
+}
+#display{
+
+    padding: auto;
+    text-align: center;
+}
+.cronometro{
+
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    font-size: 30px;
+    color: aliceblue;
+    padding: 10px 0;
+    background: rgb(111, 38, 111);
+    border-radius: 30px;
+    border: 10px double rgb(152, 82, 156);
+}
+#combinacion{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: auto;
+    background:linear-gradient(purple, rgb(43, 17, 52));
+    border-radius: 10px;
+}
