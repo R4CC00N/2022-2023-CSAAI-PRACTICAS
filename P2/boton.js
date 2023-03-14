@@ -10,7 +10,6 @@ const display_num_1 = document.getElementById("display_num_1");
 const display_num_2 = document.getElementById("display_num_2");
 const display_num_3 = document.getElementById("display_num_3");
 const display_num_4 = document.getElementById("display_num_4");
-var displays=[];
 
 console.log("Ejecuitando JS...");
 
@@ -34,7 +33,8 @@ let estado=ESTADO.INIT;
 
 var secretcode=[];
 var aciertos = [];
-console.log(secretcode)
+var displays=[];
+
 function digito(ev)
 {
     //-- Se ha recibido un dígito
@@ -44,9 +44,9 @@ function digito(ev)
     //-- Si es el primer dígito, no lo añadimos,
     //-- sino que lo mostramos directamente en el display
     if (estado == ESTADO.INIT) {
-      numero_random()
+      numero_random();
       estado=ESTADO.EMPEZAR
-      crono.start()
+      crono.start();
     } 
     if(estado== ESTADO.EMPEZAR) {
       comprobar_digitos(ev);
@@ -54,6 +54,7 @@ function digito(ev)
     if(aciertos.length == 4) {
       console.log('HAS GANADO!!!!!!')
       crono.stop();
+      aciertos=[];
     } 
     
 }
@@ -81,40 +82,42 @@ function numero_random(){
 
 
 function comprobar_digitos(ev){
-  
+  console.log('CODIGO SECRETO',secretcode)
+  console.log('ACIERTOS',aciertos)
+  console.log('DISPLAYS',displays)
+  displays=[display_num_1,display_num_2,display_num_3,display_num_4];
   for (i=0;i<secretcode.length;i++)
   {
     if(secretcode[i]== parseInt(ev.target.value)){
-    console.log(secretcode)
-    //console.log('secreto',secretcode[i])
-    //console.log('numero',parseInt(ev.target.value))
-    //console.log('caso 1 a', secretcode.indexOf(ev.target.value))
-      if(i==0){
-        display_num_1.innerHTML = ev.target.value;
-        //displays.splice(i,1);
-        aciertos.push(secretcode[i]);
-        //secretcode.splice(i,1);
-      }
-      if(i==1){
-        display_num_2.innerHTML = ev.target.value;
-        //displays.splice(i,1);
-        aciertos.push(secretcode[i]);
-        //secretcode.splice(i,1);
-      }
-      if(i==2){
-        display_num_3.innerHTML = ev.target.value;
-        //displays.splice(i,1);
-        aciertos.push(secretcode[i]);
-        //secretcode.splice(i,1);
-      }
-      if(i==3){
-        display_num_4.innerHTML = ev.target.value;
-        //displays.splice(i,1);
-        aciertos.push(secretcode[i]);
-        //secretcode.splice(i,1);
-      }
+      displays[i].innerHTML = ev.target.value;
+      //displays.splice(i,1);
+      aciertos.push(secretcode[0]);
+      secretcode[i]=22;
     }
+    
   }
+}
+
+function comprobar_digitos2(ev){
+  console.log('CODIGO SECRETO',secretcode)
+  console.log('ACIERTOS',aciertos)
+  if(secretcode[0]==ev.target.value){
+    display_num_1.innerHTML = ev.target.value;
+    aciertos.push(secretcode[0])
+  }
+  if(secretcode[1]==ev.target.value){
+    display_num_2.innerHTML = ev.target.value;
+    aciertos.push(secretcode[1])
+  }
+  if(secretcode[2]==ev.target.value){
+    display_num_3.innerHTML = ev.target.value;
+    aciertos.push(secretcode[2])
+  }
+  if(secretcode[3]==ev.target.value){
+    display_num_4.innerHTML = ev.target.value;
+    aciertos.push(secretcode[3])
+  }
+
 }
 
 //-- Arranque del cronometro
@@ -122,6 +125,7 @@ gui.start.onclick = () => {
   console.log("Start!!");
   crono.start();
   estado=ESTADO.EMPEZAR
+  //numero_random()
 }
 
 //-- Detener el cronómetro
@@ -135,12 +139,14 @@ gui.stop.onclick = () => {
 gui.reset.onclick = () => {
   console.log("Reset!");
   crono.stop();
+  numero_random()
   crono.reset();
   aciertos=[];
+  secretcode=[];
   display_num_1.innerHTML = '*';
   display_num_2.innerHTML = '*';
   display_num_3.innerHTML = '*';
   display_num_4.innerHTML = '*';
   estado = ESTADO.INIT;
-  numero_random();
+  
 }
