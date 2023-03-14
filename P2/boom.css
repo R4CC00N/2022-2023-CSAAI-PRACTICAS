@@ -10,7 +10,7 @@
     padding: 10px;
 }
 .secreto{
-    border: 10px double rgb(152, 82, 156);
+    border: 10px inset rgb(207, 114, 212);
     border-radius: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -30,13 +30,15 @@
     border-radius: 50px;
     font-size: 30px;
     color: aliceblue;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: 0px;
     padding: auto;
     background: linear-gradient(rgb(237, 180, 255),rgb(176, 85, 176));
+    border: 5px inset rgb(233, 148, 238);
 }
 .accion{
+
     justify-content: space-around;
     border-radius: 10px;
     border: 0px;
@@ -46,10 +48,18 @@
 .img_boton{
     width: 30%;
 }
-#display{
 
-    padding: auto;
+#display{
+    margin-bottom: 15px;
     text-align: center;
+}
+.display_errores{
+    font-size: 15px;
+    position:absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .cronometro{
 
@@ -62,13 +72,23 @@
     padding: 10px 0;
     background: rgb(111, 38, 111);
     border-radius: 30px;
-    border: 10px double rgb(152, 82, 156);
+    border: 10px outset rgb(207, 114, 212);
+
 }
 #combinacion{
+    border: 10px groove rgb(120, 76, 135);
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
     width: auto;
     background:linear-gradient(purple, rgb(43, 17, 52));
-    border-radius: 10px;
+    border-radius: 15px;
+}
+.contenedor{
+    margin-left: 44%;
+    width: auto;
+    position: relative;
+    display: inline-block;
+    align-content: center;
+    margin-bottom: 10px;
 }

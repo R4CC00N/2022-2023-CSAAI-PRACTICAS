@@ -5,11 +5,13 @@ const gui = {
   stop : document.getElementById("stop"),
   reset : document.getElementById("reset"),
 }
+window.alert('TIENES QUE ADIVINAR EL CODIGO SECRETO PERO TIENES 10 INTENTOS, BUENA SUERTE')
 const botones = document.getElementsByClassName("digito")
 const display_num_1 = document.getElementById("display_num_1");
 const display_num_2 = document.getElementById("display_num_2");
 const display_num_3 = document.getElementById("display_num_3");
 const display_num_4 = document.getElementById("display_num_4");
+const display_error= document.getElementById("display_errores");
 
 console.log("Ejecuitando JS...");
 
@@ -32,8 +34,9 @@ let estado=ESTADO.INIT;
 // empezar el juego solo cuando damos start
 
 var secretcode=[];
-var aciertos = [];
 var displays=[display_num_1,display_num_2,display_num_3,display_num_4];
+var errores=0;
+var aciertos = 0;
 
 function digito(ev)
 {
@@ -42,6 +45,8 @@ function digito(ev)
     //-- Si es el primer dígito, no lo añadimos,
     //-- sino que lo mostramos directamente en el display
     if (estado == ESTADO.INIT) {
+      errores=0;
+      aciertos=0;
       numero_random();
       estado=ESTADO.EMPEZAR
       crono.start();
@@ -49,12 +54,15 @@ function digito(ev)
     if(estado== ESTADO.EMPEZAR) {
       comprobar_digitos(ev);
     }
-    if(aciertos.length == 4) {
+    if(aciertos == 4) {
       console.log('HAS GANADO!!!!!!')
       crono.stop();
-      aciertos=[];
       window.alert('HAS GANADO');
     } 
+    if (errores==10){
+      window.alert('HAS PERDIDO')
+      crono.stop();
+    }
     
 }
 for (let boton of botones) {
@@ -83,12 +91,25 @@ function numero_random(){
 function comprobar_digitos(ev){
   for (i=0;i<secretcode.length;i++)
   {
-    if(secretcode[i]== parseInt(ev.target.value)){
+    if(secretcode[i] == ev.target.value){
       displays[i].innerHTML = ev.target.value;
-      aciertos.push(secretcode[0]);
+      aciertos+=1;
       secretcode[i]=22;
       break;
     }
+  }
+  if(secretcode.includes(ev.target.value)){
+    console.log('ACIERTOS',aciertos)
+  }
+  else{
+    //PODEMOS METER OTRO DISPLAY QUE VAYA RESTANDO
+    errores+=1;
+    display_error.innerHTML-=1;
+    if(display_error.innerHTML<0){
+      errores=0;
+      display_error.innerHTML=0;
+    }
+    console.log('FALLOS',errores)
   }
 }
 
@@ -103,7 +124,6 @@ gui.start.onclick = () => {
 //-- Detener el cronómetro
 gui.stop.onclick = () => {
   console.log("Stop!");
-  estado = ESTADO.FINAL
   crono.stop();
 }
 
@@ -118,6 +138,7 @@ gui.reset.onclick = () => {
   display_num_2.innerHTML = '*';
   display_num_3.innerHTML = '*';
   display_num_4.innerHTML = '*';
+  display_error.innerHTML = '10';
   estado = ESTADO.INIT;
   
 }
