@@ -5,6 +5,7 @@
     }
   }
 .codigo{ 
+    margin-left: 30%;
     color: aliceblue;
     font-size: 30px;
     padding: 10px;
@@ -53,10 +54,14 @@
     margin-bottom: 15px;
     text-align: center;
 }
-.display_errores{
-    font-size: 15px;
+#vidas{
+    width: 55px;
+}
+#display_errores{
+    color: aliceblue;
+    font-size: 30px;
     position:absolute;
-    text-align: center;
+    text-align: right;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -85,7 +90,7 @@
     border-radius: 15px;
 }
 .contenedor{
-    margin-left: 44%;
+    margin-left: 50%;
     width: auto;
     position: relative;
     display: inline-block;

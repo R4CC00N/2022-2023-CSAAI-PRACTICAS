@@ -11,7 +11,9 @@ const display_num_1 = document.getElementById("display_num_1");
 const display_num_2 = document.getElementById("display_num_2");
 const display_num_3 = document.getElementById("display_num_3");
 const display_num_4 = document.getElementById("display_num_4");
+
 const display_error= document.getElementById("display_errores");
+const click_sound = new Audio('click.mp3');
 
 console.log("Ejecuitando JS...");
 
@@ -35,11 +37,13 @@ let estado=ESTADO.INIT;
 
 var secretcode=[];
 var displays=[display_num_1,display_num_2,display_num_3,display_num_4];
-var errores=0;
+var errores= 0;
 var aciertos = 0;
 
 function digito(ev)
 {
+    click_sound.currentTime = 0;
+    click_sound.play();
     //-- Se ha recibido un dígito
     //-- se hará una cosa u otra
     //-- Si es el primer dígito, no lo añadimos,
@@ -47,6 +51,7 @@ function digito(ev)
     if (estado == ESTADO.INIT) {
       errores=0;
       aciertos=0;
+      secretcode=[];
       numero_random();
       estado=ESTADO.EMPEZAR
       crono.start();
@@ -89,16 +94,18 @@ function numero_random(){
 }
 
 function comprobar_digitos(ev){
+  console.log(secretcode)
   for (i=0;i<secretcode.length;i++)
   {
     if(secretcode[i] == ev.target.value){
       displays[i].innerHTML = ev.target.value;
+      displays[i].style.color = 'lightgreen';
       aciertos+=1;
       secretcode[i]=22;
       break;
     }
   }
-  if(secretcode.includes(ev.target.value)){
+  if(secretcode.includes(ev)==true){
     console.log('ACIERTOS',aciertos)
   }
   else{
@@ -132,12 +139,14 @@ gui.reset.onclick = () => {
   console.log("Reset!");
   crono.stop();
   crono.reset();
-  aciertos=[];
-  secretcode=[];
   display_num_1.innerHTML = '*';
   display_num_2.innerHTML = '*';
   display_num_3.innerHTML = '*';
   display_num_4.innerHTML = '*';
+  display_num_1.style.color = 'white';
+  display_num_2.style.color = 'white';
+  display_num_3.style.color = 'white';
+  display_num_4.style.color = 'white';
   display_error.innerHTML = '10';
   estado = ESTADO.INIT;
   
