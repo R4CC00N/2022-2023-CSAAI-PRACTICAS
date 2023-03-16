@@ -4,6 +4,10 @@
       width: 100%;
     }
   }
+body{
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+}
 .codigo{ 
     margin-left: 30%;
     color: aliceblue;
@@ -81,6 +85,7 @@
 
 }
 #combinacion{
+    margin-top: 20%;
     border: 10px groove rgb(120, 76, 135);
     margin-left: auto;
     margin-right: auto;
