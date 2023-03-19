@@ -38,7 +38,7 @@ body{
     width: 70px;
     height: 70px;
     border: 0px;
-    padding: auto;
+    
     background: linear-gradient(rgb(237, 180, 255),rgb(176, 85, 176));
     border: 5px inset rgb(233, 148, 238);
 }
@@ -47,7 +47,7 @@ body{
     justify-content: space-around;
     border-radius: 10px;
     border: 0px;
-    padding: auto;
+    
     background: linear-gradient(rgb(228, 140, 255),rgb(111, 38, 111));
 }
 .img_boton{
@@ -85,7 +85,7 @@ body{
 
 }
 #combinacion{
-    margin-top: 20%;
+    margin-top: 5%;
     border: 10px groove rgb(120, 76, 135);
     margin-left: auto;
     margin-right: auto;
