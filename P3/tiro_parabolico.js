@@ -7,14 +7,26 @@ const crono = new Crono(display);
 //-- Definir el tamaño del canvas
 canvas.width = 900;
 canvas.height = 300;
-const size = 30;
 //-- Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
+//-- Esta deshabilitada
+var p1 = document.getElementById("raccoon");
+var p2 = document.getElementById("martillo");
+var fondo = document.getElementById("fondo");
 
-//-- Coordenadas del objeto
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+//-- Coordenadas del objeto lanzado
+const size = 60;
 let x = 10;
 let y = size +10;
 
+const size2 = 60;
+let x0 = Math.round(getRandomArbitrary(80,canvas.width-size2));
+let y0 = size2 +10
+console.log('distancia',x0)
 
 // DISPLAYS QUE SE USARAN PARA VELOCIDAD Y ANGULO
 
@@ -54,34 +66,68 @@ var active = false;
 
 function update() 
 {
-    vx = vel * Math.cos((angle*Math.PI)/180);
-    vy = vel * Math.sin((angle*Math.PI)/180);
-    x=x+ vx*t;
-    y= y + vy*t-0.5*g*t*t;
-    if (active){
-      vel = velocidad.value*0.1;
-      angle = angulo.value;
-      t+=0.04;
-      crono.start();
-    }
-    else{
-      crono.stop();
-    }
+  //-- 1) Creacion del movimiento parabolico
+  movimiento();
+  //-- 2) Borrar el canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  //-- 3) Dibujar los elementos visibles
+  dibujarFondo();
+  dibujarPj2();
+  dibujarPj1();
+
+  //-- 4) Volver a ejecutar update cuando toque
+  requestAnimationFrame(update);
+}
+
+
+function range(start, stop=undefined, step=1) {
+  const startArray = stop  === undefined ? 0 : start;
+  const stopArray = stop  === undefined ? start : stop;
+  return Array.from({ length: (stopArray - startArray) / step + 1}, (_, i) => startArray + (i * step));
+}
+
+
+console.log(range(x0-20,x0+20))
+console.log(range(y0-10,y0+10))
+
+
+function movimiento(){
+
+  vx = vel * Math.cos((angle*Math.PI)/180);
+  vy = vel * Math.sin((angle*Math.PI)/180);
+  x=x+ vx*t;
+  y= y + vy*t-0.5*g*t*t;
+
+  // activacion de movimiento
+  if (active){
+    vel = velocidad.value*0.123;
+    angle = angulo.value;
+    t+=0.04;
+    crono.start();
+  }
+  else{
+    crono.stop();
+  }
   //-- Condición de rebote en extremos horizontales del canvas
   if (y <= size + 5) {
     vel = 0;
     t=0;
     active=false;
   }
-  //-- 2) Borrar el canvas
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  //-- 3) Dibujar los elementos visibles
+  // deteccion de colision y victoria
+  if ( range(x0-((size*2)/3),x0+((size*2)/3)).includes(Math.round(x)) && range(y0-10,y0+10).includes(Math.round(y))){
+    window.alert('HAS GANADO');
+    location.reload();
+  }
+  
+}
+function dibujarFondo(){
   ctx.beginPath();
-    ctx.rect(x, canvas.height - y, size, size);
+    ctx.drawImage(fondo,0,-20, canvas.width, canvas.height+50);
 
     //-- Dibujar
-    ctx.fillStyle = 'red';
+    //ctx.fillStyle = 'red';
 
     //-- Rellenar
     ctx.fill();
@@ -89,9 +135,36 @@ function update()
     //-- Dibujar el trazo
     ctx.stroke()
   ctx.closePath();
+}
+function dibujarPj1(){
+  ctx.beginPath();
+    ctx.drawImage(p2,x, canvas.height - y, size, size);
 
-  //-- 4) Volver a ejecutar update cuando toque
-  requestAnimationFrame(update);
+    //-- Dibujar
+    //ctx.fillStyle = 'red';
+
+    //-- Rellenar
+    ctx.fill();
+
+    //-- Dibujar el trazo
+    ctx.stroke()
+  ctx.closePath();
+}
+
+function dibujarPj2(){
+
+  ctx.beginPath();
+    ctx.drawImage(p1,x0, canvas.height - y0, size2, size2);
+
+    //-- Dibujar
+    ctx.fillStyle = 'green';
+
+    //-- Rellenar
+    ctx.fill();
+
+    //-- Dibujar el trazo
+    ctx.stroke()
+  ctx.closePath();
 }
 
 update();

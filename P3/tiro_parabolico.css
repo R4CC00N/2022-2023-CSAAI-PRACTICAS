@@ -3,8 +3,17 @@
   Lo bordeamos con una línea negra y le damos fondo
   azul para distinguirlo
 */
-
+#raccoon {
+  display: none;
+}
+#martillo {
+  display: none;
+}
+#fondo {
+  display: none;
+}
 canvas {
+  
     background-color: lightblue;
     border-style: solid;
     border-width: 1px;
