@@ -115,9 +115,12 @@ function movimiento(){
     t=0;
     active=false;
   }
+
   // deteccion de colision y victoria
   if ( range(x0-((size*2)/3),x0+((size*2)/3)).includes(Math.round(x)) && range(y0-10,y0+10).includes(Math.round(y))){
     window.alert('HAS GANADO');
+    x=10;
+    y=size+10;
     location.reload();
   }
   
