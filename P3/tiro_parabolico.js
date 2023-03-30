@@ -13,6 +13,10 @@ const ctx = canvas.getContext("2d");
 var p1 = document.getElementById("raccoon");
 var p2 = document.getElementById("martillo");
 var fondo = document.getElementById("fondo");
+var gif = new Image();
+gif.src='giphy.gif'
+const click_sound = new Audio('lanza.mp3');
+const click_sound2 = new Audio('punch.mp3');
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
@@ -101,12 +105,15 @@ function movimiento(){
 
   // activacion de movimiento
   if (active){
+    
     vel = velocidad.value*0.123;
     angle = angulo.value;
     t+=0.04;
     crono.start();
   }
   else{
+    click_sound.currentTime = 0;
+    click_sound.play();
     crono.stop();
   }
   //-- Condición de rebote en extremos horizontales del canvas
@@ -118,6 +125,8 @@ function movimiento(){
 
   // deteccion de colision y victoria
   if ( range(x0-((size*2)/3),x0+((size*2)/3)).includes(Math.round(x)) && range(y0-10,y0+10).includes(Math.round(y))){
+    click_sound2.currentTime = 0;
+    click_sound2.play();
     window.alert('HAS GANADO');
     x=10;
     y=size+10;
@@ -126,6 +135,7 @@ function movimiento(){
   
 }
 function dibujarFondo(){
+
   ctx.beginPath();
     ctx.drawImage(fondo,0,-20, canvas.width, canvas.height+50);
 
@@ -137,6 +147,10 @@ function dibujarFondo(){
 
     //-- Dibujar el trazo
     ctx.stroke()
+  ctx.closePath();
+
+  ctx.beginPath();
+    ctx.drawImage(gif,500,0, 100, 100);
   ctx.closePath();
 }
 function dibujarPj1(){
