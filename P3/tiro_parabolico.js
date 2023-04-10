@@ -144,6 +144,7 @@ function revisar_intento(){
     window.alert('HAS GANADO');
     x=10;
     y=size+10;
+    fallos = 0;
     location.reload();
   }
   if(fallos == 3){
@@ -221,5 +222,6 @@ reset.onclick = ()=>{
     x=10;
     y=size+10;
     location.reload();
+    fallos = 0;
 
 }
