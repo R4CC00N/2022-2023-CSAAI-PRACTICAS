@@ -13,8 +13,10 @@ const ctx = canvas.getContext("2d");
 var p1 = document.getElementById("raccoon");
 var p2 = document.getElementById("martillo");
 var fondo = document.getElementById("fondo");
+
 var gif = new Image();
 gif.src='giphy.gif'
+
 const click_sound = new Audio('lanza.mp3');
 const click_sound2 = new Audio('punch.mp3');
 
@@ -66,6 +68,10 @@ var angle=0;
 var t=0;
 var g = 9.8;
 var active = false;
+
+// variable para fallos
+var fallos=0;
+
 //-- Función principal de animación
 
 function update() 
@@ -90,10 +96,6 @@ function range(start, stop=undefined, step=1) {
   const stopArray = stop  === undefined ? start : stop;
   return Array.from({ length: (stopArray - startArray) / step + 1}, (_, i) => startArray + (i * step));
 }
-
-
-console.log(range(x0-20,x0+20))
-console.log(range(y0-10,y0+10))
 
 
 function movimiento(){
@@ -121,8 +123,20 @@ function movimiento(){
     vel = 0;
     t=0;
     active=false;
+    
+    if ((range(x0-((size*2)/3),x0+((size*2)/3)).includes(Math.round(x)) && range(y0-10,y0+10).includes(Math.round(y)))==false){
+        window.alert('HAS FALLADO')
+        x=10;
+        y=size+10;
+        fallos += 1;
+    }
+    
   }
+  revisar_intento();
 
+}
+
+function revisar_intento(){
   // deteccion de colision y victoria
   if ( range(x0-((size*2)/3),x0+((size*2)/3)).includes(Math.round(x)) && range(y0-10,y0+10).includes(Math.round(y))){
     click_sound2.currentTime = 0;
@@ -132,8 +146,13 @@ function movimiento(){
     y=size+10;
     location.reload();
   }
-  
+  if(fallos == 3){
+    window.alert('HAS PERDIDO GRACIAS POR JUGAR');
+    fallos = 0;
+    location.reload();
+  }
 }
+
 function dibujarFondo(){
 
   ctx.beginPath();
@@ -201,5 +220,6 @@ reset.onclick = ()=>{
     active=false;
     x=10;
     y=size+10;
+    location.reload();
 
 }
