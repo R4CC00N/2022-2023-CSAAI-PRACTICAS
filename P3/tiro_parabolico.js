@@ -125,7 +125,7 @@ function movimiento(){
     active=false;
     
     if ((range(x0-((size*2)/3),x0+((size*2)/3)).includes(Math.round(x)) && range(y0-10,y0+10).includes(Math.round(y)))==false){
-        window.alert('HAS FALLADO')
+        window.alert('BUEN INTENTO')
         x=10;
         y=size+10;
         fallos += 1;
