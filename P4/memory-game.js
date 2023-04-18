@@ -18,7 +18,9 @@ const state = {
   loop: null
 }
 var img1 = new Image();
-img1.src= 'carta-back.png'
+img1.src= 'carta-back.png';
+
+
 const generateGame = () => {
   result = window.prompt("ELIJA DIMENSION 2,4,6");
   validos=[2,4,6];
@@ -38,8 +40,13 @@ const generateGame = () => {
   }
 
   //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-  const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍','👺','👹','🦍','🦝','💰','🧿','🔞','🇪🇸']
-  
+  const emojis = ['🍥', '🏯', '🎋', 
+                  '🌸', '🥷', '💮', 
+                  '🗻', '🎏', '🍜', 
+                  '🍣','👺','👹',
+                  '🎴','🦝','🗼',
+                  '🎎','🎆','🍙']
+
   //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
   // es diferente.
   // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
