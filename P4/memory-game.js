@@ -46,7 +46,7 @@ const generateGame = () => {
                   '🍣','👺','👹',
                   '🎴','🦝','🗼',
                   '🎎','🎆','🍙']
-
+  //const emojis = ["raccoon.png","back.png"]
   //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
   // es diferente.
   // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
@@ -64,7 +64,7 @@ const generateGame = () => {
           ${items.map(item => `
               <div class="card">
                   <div class="card-front"></div>
-                  <div class="card-back">${item}</div>
+                  <div class="card-back"><img src="${item}" alt="${item}"></div>
               </div>
           `).join('')}
      </div>
@@ -201,7 +201,7 @@ const flipCard = card => {
 
       // Si las cartas coinciden las marcamos como pareja 
       // añadiendo la clase correspondiente
-      if (flippedCards[0].innerText === flippedCards[1].innerText) {
+      if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
           flippedCards[0].classList.add('matched')
           flippedCards[1].classList.add('matched')
       }
