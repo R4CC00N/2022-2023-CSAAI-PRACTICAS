@@ -41,7 +41,7 @@ const generateGame = () => {
 
   //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
   const emojis = ['🍥', '🏯', '🎋', 
-                  '🌸', '🥷', '💮', 
+                  '🌸', '🍘', '💮', 
                   '🗻', '🎏', '🍜', 
                   '🍣','👺','👹',
                   '🎴','🦝','🗼',
