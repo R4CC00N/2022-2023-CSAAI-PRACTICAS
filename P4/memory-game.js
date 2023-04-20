@@ -64,7 +64,7 @@ const generateGame = () => {
           ${items.map(item => `
               <div class="card">
                   <div class="card-front"></div>
-                  <div class="card-back"><img src="${item}" alt="${item}"></div>
+                  <div class="card-back">${item}</div>
               </div>
           `).join('')}
      </div>
