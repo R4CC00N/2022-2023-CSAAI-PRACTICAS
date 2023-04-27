@@ -120,19 +120,19 @@ const sendImage = () => {
     sw2 = sw1;
     sh2 = state.totalPackages - sh1;
 
-     if (sh2 > 1) {
+     if (sh2 > 0) {
        //-- seleccionamos el rectángulo 2
-       imgData = ctx.getImageData(sy2, sx2, sw2, sh2)
+       imgData = ctx.getImageData(sx2, sh2, sw2, sw2)
        //-- Obtener el array con todos los píxeles
        data = imgData.data
-        r= 255;
-        g= 75;
-        b= 125;
-       for (let i = data.length; i >=0; i-=6) {
+        r= 230;
+        g= 220;
+        b= 250;
+       for (let i = 0; i <data.length; i+=6) {
          //let brillo = (1 * data[i] + 2 * data[i+1] + data[i+2])/3
         //brillo = (3 * r + 4 * g + b)/2
-         data[i] = r;
-         data[i+1] = g;
+         data[i] = g;
+         data[i+1] = r;
          data[i+2] = b;         
        }  
      }
