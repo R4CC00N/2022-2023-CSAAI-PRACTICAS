@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="Ej-01.js" defer></script>
+    <title>Simulando la Red</title>
+</head>
+<body>
+    <p>Imagen en Origen</p>
+    <img src="logoURJC.png" id="imagesrc">
+    <img src="logoURJC.png" id="imagesrchide">    
+    <img src="pepo.jpg" id="cloud">
+    <button id="bsend">Enviar</button>    
+    <p>Imagen en Destino</p>
+    <canvas id="canvas"></canvas>
+    <p>Delay</p>
+    <input type="range" id="netdelay" min="1" max="5" value="1">
+    <span id="netdelay_value"> 0 </span>    
+    <br>
+    <p>Numero de nodos</p>
+    <input type="range" id="nNodo" min="3" max="8" value="3"> 
+    <span id="node_value"> 0 </span>
+    <p>La red</p>
+    <img src="mapache.gif">    
+</body>
+</html>
