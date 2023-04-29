@@ -9,21 +9,40 @@
     <title>Simulando la Red</title>
 </head>
 <body>
-    <p>Imagen en Origen</p>
-    <img src="logoURJC.png" id="imagesrc">
-    <img src="logoURJC.png" id="imagesrchide">    
-    <img src="pepo.jpg" id="cloud">
-    <button id="bsend">Enviar</button>    
-    <p>Imagen en Destino</p>
-    <canvas id="canvas"></canvas>
-    <p>Delay</p>
-    <input type="range" id="netdelay" min="1" max="5" value="1">
-    <span id="netdelay_value"> 0 </span>    
-    <br>
-    <p>Numero de nodos</p>
-    <input type="range" id="nNodo" min="3" max="8" value="3"> 
-    <span id="node_value"> 0 </span>
-    <p>La red</p>
-    <img src="mapache.gif">    
+    
+    <h1>SIMULADOR DE RED</h1>
+    
+    <div class="back">
+        <p>
+        <div id="origen">
+            <p>Imagen en Origen</p>
+
+            <img src="logoURJC.png" id="imagesrc">
+            <img src="logoURJC.png" id="imagesrchide">    
+            <img src="pepo.jpg" id="cloud">
+            <div id="envio">
+                <button id="bsend">Enviar</button>   
+            </div>
+            
+        </div> 
+        <div id="destino">
+            <p>Imagen en Destino</p>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="control">
+            <p>Delay</p>
+            <input type="range" id="netdelay" min="1" max="5" value="1">
+            <span id="netdelay_value"> 0 </span>    
+            <br>
+            <p>Numero de nodos</p>
+            <input type="range" id="nNodo" min="3" max="8" value="3"> 
+            <span id="node_value"> 0 </span>
+        </div>
+        <div id="red">
+            <p>La red</p>
+            <img src="mapache.gif">    
+        </div>
+        </p>
+    </div>
 </body>
 </html>

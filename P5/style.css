@@ -1,5 +1,8 @@
 body {
     background-color: grey;
+    position:absolute;
+    left: 30%;
+    
   }
 
 #cloud {
@@ -8,4 +11,81 @@ body {
 
 #imagesrchide {
   display: none;
+}
+#imagesrchide2{
+  display:none;
+}
+h1{
+  padding: 10px;
+  text-align: center;
+  border: solid  red;
+  background-color: rgb(64, 152, 230);
+  border-radius: 10px;
+  border-width: 5px;
+
+}
+#origen{
+
+  border: solid red;
+  
+
+}
+#envio{
+  border: solid red;
+  position: absolute;
+  top: 15%;
+  left: 120%;
+  transform: translate(0%, 0%);
+  
+}
+#destino{
+  margin-top: 10px;
+  border: solid red;
+  
+}
+#control{
+  border: solid red;
+  background-color: cyan ;
+  padding: 20px;
+  position: absolute;
+  top: 35%;
+  left: 110%;
+  transform: translate(0%, 0%);
+  
+}
+#red{
+  margin-top: 10px;
+  border: solid red;
+}
+.back{
+  padding: 30px;
+  border: solid greenyellow;
+  background-color: green;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  text-align: center;
+
+}
+button {
+  cursor:pointer;
+  background: #505167;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 5px inset rgb(120, 152, 88);
+  font-family: Fredoka;
+  font-size: 18pt;
+}
+button:hover{
+  background: #282A3A;
+  color: rgb(166, 255, 0);
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 5px outset rgb(162, 203, 119);
+  font-family: Fredoka;
+  font-size: 18pt;
 }
