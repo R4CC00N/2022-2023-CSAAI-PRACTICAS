@@ -2,6 +2,7 @@
   .back{
     width: 300%;
     margin-top: 70%;
+    margin-left: 80%;
     
   }
   body{
@@ -16,7 +17,16 @@
     text-align: center;
     width: 150%;
     font-size: 20px;
-    margin-left: -30%;
+    margin-left: 40%;
+    
+  }
+  #red{
+    width: 100%;
+    align-items: center;
+  }
+  #control{
+    left: 20%;
+    
   }
 
 }
@@ -78,6 +88,7 @@ h1{
   margin-top: 20%;
   border: solid red;
   width: 600px;
+  align-items: center;
 
 }
 .back{
