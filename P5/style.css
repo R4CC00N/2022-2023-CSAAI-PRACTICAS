@@ -1,3 +1,31 @@
+@media screen and (max-width: 600px) {
+  .back{
+    width: 200%;
+    margin-top: 70%;
+    
+  }
+  body{
+    width: 30%;
+    height: 10%;
+  }
+  img{
+    width: 100%;
+  }
+  h1{
+    
+    text-align: center;
+    width: 150%;
+    font-size: 20px;
+    margin-left: -30%;
+  }
+  #control{
+    position: absolute;
+    top: 70%;
+    left: 11%;
+    transform: translate(0%, 0%);
+  }
+
+}
 body {
     background-color: grey;
     position:absolute;
@@ -12,9 +40,7 @@ body {
 #imagesrchide {
   display: none;
 }
-#imagesrchide2{
-  display:none;
-}
+
 h1{
   padding: 10px;
   text-align: center;
@@ -22,8 +48,8 @@ h1{
   background-color: rgb(64, 152, 230);
   border-radius: 10px;
   border-width: 5px;
-
 }
+
 #origen{
 
   border: solid red;
