@@ -11,6 +11,7 @@
 <body>
     
     <h1>SIMULADOR DE RED</h1>
+    <img src="mapache.gif" alt="red" id="red">
     
     <div class="back">
         
@@ -30,17 +31,16 @@
             <canvas id="canvas"></canvas>
         </div>
         <div id="control">
-            <p>Delay</p>
-            <input type="range" id="netdelay" min="1" max="5" value="1">
-            <span id="netdelay_value"> 0 </span>    
-            <br>
-            <p>Numero de nodos</p>
-            <input type="range" id="nNodo" min="3" max="8" value="3"> 
-            <span id="node_value"> 0 </span>
-        </div>
-        <div id="red">
-            <p>La red</p>
-            <img src="mapache.gif" id="nodos">    
+            <div>
+                <p>Delay</p>
+                <input type="range" id="netdelay" min="1" max="5" value="1">
+                <span id="netdelay_value"> 0 </span>    
+            </div>
+            <div>
+                <p>Numero de nodos</p>
+                <input type="range" id="nNodo" min="3" max="8" value="3"> 
+                <span id="node_value"> 0 </span>
+            </div>
         </div>
         
     </div>
