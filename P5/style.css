@@ -56,18 +56,13 @@ body {
 #cloud {
   
   display: none;
-  border: 8px inset rgb(136, 136, 136);
-  border-radius: 10px;
 }
 #imagesrc {
-  
   border: 8px inset rgb(136, 136, 136);
   border-radius: 10px;
 }
 #imagesrchide {
   display: none;
-  border: 8px inset rgb(136, 136, 136);
-  border-radius: 10px;
 }
 
 h1{
