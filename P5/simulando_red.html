@@ -10,35 +10,33 @@
 </head>
 <body>
     
-    <h1>SIMULADOR DE RED</h1>
-    <img src="mapache.gif" alt="red" id="red">
+    <h1>AYUDA A RACCOON A COPIAR</h1>
     
     <div class="back">
-        
+        <h2>Imagen en enviada</h2>
         <div id="origen">
-            <p>Imagen en Origen</p>
-
-            <img src="logoURJC.png" id="imagesrc">
-            <img src="logoURJC.png" id="imagesrchide">    
-            <img src="pepo.jpg" id="cloud">
-            <div id="envio">
-                <button id="bsend">Enviar</button>   
-            </div>
-            
+            <img src="respuestas.png" id="imagesrc">
+            <img src="respuestas.png" id="imagesrchide">    
+            <img src="subir.gif" id="cloud">
+        
         </div> 
+        <div id="envio">
+            <button id="bsend">Enviar</button>   
+        </div>
+        <h2>Imagen en recibida</h2>
         <div id="destino">
-            <p>Imagen en Destino</p>
             <canvas id="canvas"></canvas>
         </div>
         <div id="control">
+            <img src="envio.gif" id="load">
             <div>
                 <p>Delay</p>
-                <input type="range" id="netdelay" min="1" max="5" value="1">
+                <input type="range" class="slider" id="netdelay" min="1" max="5" value="1">
                 <span id="netdelay_value"> 0 </span>    
             </div>
             <div>
                 <p>Numero de nodos</p>
-                <input type="range" id="nNodo" min="3" max="8" value="3"> 
+                <input type="range" class="slider" id="nNodo" min="3" max="8" value="3"> 
                 <span id="node_value"> 0 </span>
             </div>
         </div>

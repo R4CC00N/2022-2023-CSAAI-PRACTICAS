@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "font_txt";
+  src: url("Ghyne-9YRy5.otf");
+}
 @media screen and (max-width: 600px) {
   .back{
     width: 300%;
@@ -31,72 +35,86 @@
 
 }
 body {
+    font-family: "font_txt";
+    color: #FFF;
     background-color: grey;
     position:absolute;
-    left: 30%;
-    
+    left: 38%;
+    top: 5%;
+    background-image: url(fondo.gif);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
   }
-
-#cloud {
-  display: none;
+#load{
+  border: 20px ridge rgba(232, 242, 255, 0.4);
+  border-radius: 30px;
+  width: 70%;
+  position: absolute;
+  right: 110%;
+  top: -50%;
+  
 }
-
-#imagesrchide {
+#cloud {
+  
   display: none;
+  border: 8px inset rgb(136, 136, 136);
+  border-radius: 10px;
+}
+#imagesrc {
+  
+  border: 8px inset rgb(136, 136, 136);
+  border-radius: 10px;
+}
+#imagesrchide {
+  
+  display: none;
+  border: 8px inset rgb(136, 136, 136);
+  border-radius: 10px;
 }
 
 h1{
+  color: black;
   padding: 10px;
   text-align: center;
-  border: solid  red;
-  background-color: rgb(64, 152, 230);
+  border: 8px inset rgba(40, 96, 175, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   border-width: 5px;
 }
 
-#origen{
-
-  border: solid red;
-  
-
-}
 #envio{
-  border: solid red;
+ 
   position: absolute;
-  top: 35%;
-  left: 110%;
-  transform: translate(0%, 0%);
+  top: 110%;
+  left: 85%;
+
   
 }
 #destino{
   margin-top: 10px;
-  border: solid red;
-  
+  border: 8px inset rgb(136, 136, 136);
+  border-radius: 10px;
 }
 #control{
   display: flex;
-  border: solid red;
-  background-color: cyan ;
+  border: 8px inset rgba(40, 96, 175, 0.5);
+  background-color: rgba(145, 255, 255, 0.5);
+  border-radius: 25px;
   padding: 20px;
   position: absolute;
   top: 105%;
-  left: 10%;
-  transform: translate(0%, 0%);
+  left: -10%;
   
 }
-#red{
-  margin-top: 20%;
-  border: solid red;
-  width: 600px;
-  align-items: center;
-
-}
 .back{
+
   padding: 30px;
-  border: solid greenyellow;
-  background-color: green;
+  border: 10px ridge rgba(146, 191, 255, 0.8);
+  border-radius: 25px;
+  background-color: rgba(59, 111, 255, 0.5);
   position: absolute;
-  top: 10%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, 10%);
   text-align: center;
@@ -109,17 +127,18 @@ button {
   border-radius: 25px;
   padding: 10px 20px;
   cursor: pointer;
-  border: 5px inset rgb(120, 152, 88);
+  border: 5px inset rgb(88, 115, 152);
   font-family: Fredoka;
   font-size: 18pt;
 }
 button:hover{
   background: #282A3A;
-  color: rgb(166, 255, 0);
+  color: rgb(104, 190, 255);
   border-radius: 25px;
   padding: 10px 20px;
   cursor: pointer;
-  border: 5px outset rgb(162, 203, 119);
+  border: 5px outset rgb(119, 127, 203);
   font-family: Fredoka;
   font-size: 18pt;
 }
+
